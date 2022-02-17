@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<body  align="center" style="background-color:SlateBlue;">
+<head>
+  <meta charset="UTF-8">
+  <title>House Price Prediction</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 28px;
+      }
+      #myHeader {
+  background-color:#ff6347;
+  color: black;
+  padding: 40px;
+  text-align: center;
+} 
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+    </style>
+
+
+</head>
+
+<body>
+ <div class="login">
+	<h1 style="text-align:center" id="myHeader">House Price Prediction</h1>
+    <CENTER>
+    <form align="center" action="{{ url_for('predict')}}"method="post">
+    	<input type="text" style="text-align:center"  name="Area Above Ground Area in sf" placeholder="Area Above Ground Area in sf" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="Over All Quality" placeholder="Over All Quality" required="required" />
+        <br>
+		<input type="text" style="text-align:center" name="Over All Condition" placeholder="Over All Condition" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="Total Basement Area in sq" placeholder="Total Basement Area in sq" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="Age of House" placeholder="Age of House" required="required" />
+        <br>
+        <button align="center" class="btn btn-primary" type="submit" value="Submit">Predict</button>
+    </form>
+    </CENTER>
+
+   <br>
+   <br>
+	<CENTER>
+    {{ prediction_text }}
+	</CENTER> 
+ </div>
+
+
+</body>
+</html>
