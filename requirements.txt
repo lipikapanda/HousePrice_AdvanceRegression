@@ -12,6 +12,6 @@ MarkupSafe==1.1.1
 numpy==1.18.3
 requests==2.23.0
 scipy==1.8.0
-scikit-learn==0.22.2.post1
+scikit-learn==0.22.1
 urllib3==1.25.9
 Werkzeug==1.0.1
