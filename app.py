@@ -26,7 +26,7 @@ def predict_api():
     if (request.method == 'POST'):
         data = request.get_json()
 		data_unseen = pd.DataFrame([data])
-        return jsonify(model_load.predict(data_unseen).tolist())
+        return jsonify("hello")
     else:
         return render_template('index.html')
 
